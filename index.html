@@ -173,8 +173,6 @@
       
         <p>友情提醒：记住，所有xml配置文件不能有中文！！！不能有中文注释！！！</p>
 <h1 id="基础使用方法"><a href="#基础使用方法" class="headerlink" title="基础使用方法"></a>基础使用方法</h1><h2 id="1-使用配置文件"><a href="#1-使用配置文件" class="headerlink" title="1.使用配置文件"></a>1.使用配置文件</h2><h3 id="1-1配置文件说明"><a href="#1-1配置文件说明" class="headerlink" title="1.1配置文件说明"></a>1.1配置文件说明</h3><p>mybatis使用配置文件开发结构大概是这样的(此处省去用maven构建的过程)</p>
-<img src="https://hjbjwdk.oss-cn-guangzhou.aliyuncs.com/imges/mybatis01.png">
-其中resources下的xml文件为核心配置文件，dao下的xml文件是局部配置文件
         
           <a class="article-more-a" href="/2022/02/11/Mybatis%E6%95%B4%E5%90%88/#more">more >></a>
         
@@ -251,7 +249,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>要代理的接口和实现类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象角色：增删改查业务</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">query</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//真实对象，完成增删改查操作的人</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;增加了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;删除了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;更新了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">query</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;查询了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象角色：增删改查业务</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">query</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<!--more>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//真实对象，完成增删改查操作的人</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;增加了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;删除了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;更新了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">query</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       System.out.println(<span class="string">&quot;查询了一个用户&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>假设现在我们需要增加一个日志功能（每次调用某些或所有方法前或后输出一点东西），怎么实现！</p>
 <pre><code>思路1 ：在实现类上增加代码 【麻烦！】
 思路2：使用代理来做，能够不改变原来的业务情况下，实现此功能就是最好的了！
@@ -366,18 +366,32 @@ HelloWorld/urls.py: 该 Django 项目的 URL 声明; 一份由 Django 驱动的�
 
 HelloWorld/wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。
 </code></pre>
-<p>Django 规定，如果要使用模型，必须要创建一个 app。我们使用以下命令创建一个 TestModel 的 app:</p>
-<pre><code>django-admin.py startapp TestModel 
-</code></pre>
-<p>每次修改模型要执行：</p>
-<pre><code>$ python3 manage.py migrate   # 创建表结构
+<!--more>
+Django 规定，如果要使用模型，必须要创建一个 app。我们使用以下命令创建一个 TestModel 的 app:
 
-$ python3 manage.py makemigrations TestModel  # 让 Django 知道我们在我们的模型有一些变更
-$ python3 manage.py migrate TestModel   # 创建表结构
-</code></pre>
-<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p><a target="_blank" rel="noopener" href="https://chibisov.github.io/drf-extensions/docs/">https://chibisov.github.io/drf-extensions/docs/</a></p>
-<h3 id="踩过的坑"><a href="#踩过的坑" class="headerlink" title="踩过的坑"></a>踩过的坑</h3><h5 id="1-ModelViewSet"><a href="#1-ModelViewSet" class="headerlink" title="1.ModelViewSet"></a>1.ModelViewSet</h5><p>ModelViewSet是一个视图集合类，一个类继承了它就可以更好地把功能相似的视图类集合在一起。此外它还支持在浏览器访问相应地址后进行接口测试，十分方便<br>。</p>
-<p>大概可以这样使用</p>
+    django-admin.py startapp TestModel 
+
+
+每次修改模型要执行：
+
+    $ python3 manage.py migrate   # 创建表结构
+
+    $ python3 manage.py makemigrations TestModel  # 让 Django 知道我们在我们的模型有一些变更
+    $ python3 manage.py migrate TestModel   # 创建表结构
+
+### 扩展
+
+
+https://chibisov.github.io/drf-extensions/docs/
+
+### 踩过的坑
+
+##### 1.ModelViewSet
+ModelViewSet是一个视图集合类，一个类继承了它就可以更好地把功能相似的视图类集合在一起。此外它还支持在浏览器访问相应地址后进行接口测试，十分方便
+。
+
+大概可以这样使用
+
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#urls.py</span></span><br><span class="line">path(<span class="string">&quot;total_sc/&quot;</span>,<span class="built_in">eval</span>.total_score.as_view(&#123;<span class="string">&#x27;get&#x27;</span>:<span class="string">&#x27;get_sc&#x27;</span>,<span class="string">&#x27;post&#x27;</span>:<span class="string">&#x27;post_sc&#x27;</span>&#125;)),</span><br><span class="line"></span><br><span class="line"><span class="comment">#eval.py</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">total_score</span>(<span class="params">ModelViewSet</span>):</span>    <span class="comment">#  教师线下评价总分</span></span><br><span class="line"></span><br><span class="line">    queryset = train_total_sc.objects.<span class="built_in">all</span>()</span><br><span class="line">    serializer_class = Train_total_sc <span class="comment"># 此处为必要选项</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_sc</span>(<span class="params">self, request,*args, **kwargs</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">post_sc</span>(<span class="params">self,request, *args, **kwargs</span>):</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>由于之前一直使用简单的APIView，一直都是request.data.get(‘’)来获取参数。而且，这个处理post请求也是可以的。_但是_，处理get请求时，会得不到参数（路由配置是没问题的，可以来到这个类），显示的是none。正确的做法是：request._request.GET.get。</p>
 
@@ -595,11 +609,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ssm</a>
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
+                <a href="javascript:void(0)" class="js-tag color4">ssm</a>
               </li>
              
               <li class="article-tag-list-item">
