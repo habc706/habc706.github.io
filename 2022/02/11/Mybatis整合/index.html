@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>一只大学生的年度总结 | habc706</title>
+  <title>Mybatis整合 | habc706</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是一只大学生的总结博客时间过得真快啊，一转眼，一年又过去了。2021，感觉经历了许多，想写篇博客稍微回顾一下过去的一年。老实说，我个人其实原本并不喜欢写这种类型的文章，而且也不擅长，属于天生对文字产生抗拒类型的人。但是">
+  <meta name="description" content="友情提醒：记住，所有xml配置文件不能有中文！！！不能有中文注释！！！ 基础使用方法1.使用配置文件1.1配置文件说明mybatis使用配置文件开发结构大概是这样的(此处省去用maven构建的过程)  其中resources下的xml文件为核心配置文件，dao下的xml文件是局部配置文件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一只大学生的年度总结">
-<meta property="og:url" content="http://example.com/2022/01/27/%E4%B8%80%E7%9B%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%9A%84%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="Mybatis整合">
+<meta property="og:url" content="http://example.com/2022/02/11/Mybatis%E6%95%B4%E5%90%88/index.html">
 <meta property="og:site_name" content="habc706">
-<meta property="og:description" content="这是一只大学生的总结博客时间过得真快啊，一转眼，一年又过去了。2021，感觉经历了许多，想写篇博客稍微回顾一下过去的一年。老实说，我个人其实原本并不喜欢写这种类型的文章，而且也不擅长，属于天生对文字产生抗拒类型的人。但是">
+<meta property="og:description" content="友情提醒：记住，所有xml配置文件不能有中文！！！不能有中文注释！！！ 基础使用方法1.使用配置文件1.1配置文件说明mybatis使用配置文件开发结构大概是这样的(此处省去用maven构建的过程)  其中resources下的xml文件为核心配置文件，dao下的xml文件是局部配置文件">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://hjbjwdk.oss-cn-guangzhou.aliyuncs.com/imges/eac5d1aad55ca0bb5bec207057308b3.jpg">
-<meta property="article:published_time" content="2022-01-27T15:32:24.000Z">
-<meta property="article:modified_time" content="2022-01-30T09:37:59.810Z">
+<meta property="og:image" content="https://hjbjwdk.oss-cn-guangzhou.aliyuncs.com/imges/mybatis01.png">
+<meta property="article:published_time" content="2022-02-11T02:41:19.000Z">
+<meta property="article:modified_time" content="2022-02-11T06:22:40.051Z">
 <meta property="article:author" content="habc706">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="ssm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://hjbjwdk.oss-cn-guangzhou.aliyuncs.com/imges/eac5d1aad55ca0bb5bec207057308b3.jpg">
+<meta name="twitter:image" content="https://hjbjwdk.oss-cn-guangzhou.aliyuncs.com/imges/mybatis01.png">
   
     <link rel="alternative" href="/atom.xml" title="habc706" type="application/atom+xml">
   
@@ -153,38 +153,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-一直大学生的年度总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mybatis整合" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      一只大学生的年度总结
+      Mybatis整合
     </h1>
   
 
         
-        <a href="/2022/01/27/%E4%B8%80%E7%9B%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%9A%84%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2022-01-27T15:32:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-27</time>
+        <a href="/2022/02/11/Mybatis%E6%95%B4%E5%90%88/" class="archive-article-date">
+  	<time datetime="2022-02-11T02:41:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="这是一只大学生的总结博客"><a href="#这是一只大学生的总结博客" class="headerlink" title="这是一只大学生的总结博客"></a>这是一只大学生的总结博客</h3><p>时间过得真快啊，一转眼，一年又过去了。2021，感觉经历了许多，想写篇博客稍微回顾一下过去的一年。老实说，我个人其实原本并不喜欢写这种类型的文章，而且也不擅长，属于天生对文字产生抗拒类型的人。但是 <span id="more"></span> ，有许多个不经意的瞬间，总感觉，人生不过短短数十载，如果没有记录，那些所谓的“让最美好的都留在回忆里”，真的会变成遗憾。因此，我写这篇博客，来回顾一下我这一年的心得体会。</p>
-<p>首先，我觉得在2021年我最大的感悟就是，<em>活着真好，开心真好</em> 。为什么会这样呢？我发现，过去我常常会郁郁寡欢，整个人一看起来就是死气沉沉。有时候会强迫自己要完成某一件事，即使是心不在焉，也要做下去。最终还是完成不了什么。所以，我就想，既然都不想做，那就去嗨呗。何必苦了自己呢？想玩游戏就去玩，实在不行就随便找个人聊聊天，窜窜宿舍，到处找找乐趣，岂不美哉？而且，我发现，其实适当麻烦别人也不是一件什么不好的事。不仅自己发现新大陆，别人说不定也很乐意。</p>
-<p>来到人际交往这方面，我的理念更加成熟了。我算不上很开放的人，甚至有时候是一点小腼腆的那种。而且，一直以来，我都觉得我和别人相处的方式其实是有些问题的，甚至还为此吃过亏。但是经历了许多之后，我逐渐明白，其实平平淡淡还是挺好的。我似乎对某一类群体有着天然的亲切感，和他们交往时就感觉完全不需要顾忌什么。但是，对于某些群体，我虽然极力保持礼貌，但其实满脸写着生人勿近。<br>所以，在人际交往这方面，于我而言平和一点或许是更好的。不需要牵强附会，也不要对别人抱有太大期望，维持好基本关系，基本礼仪就好。没必要太过执着于某一些事，该干嘛干嘛就好。</p>
-<p>在日常生活中，我感悟的一个道理就是，当意识到有问题时，就要及时更正，不要重复做那些意义不大的事。之前听隔壁家训斥小孩：“大人的思想永远比小孩的更成熟。”当时就觉得挺讽刺的。凭什么活的时间久了就一定会很成熟？如果一个人一直重复做一件事，而且没有改进，也不去听听别人的东西，那不是，和刚开始做没什么区别吗？所以，我觉得，想要生活变得更多姿多彩，是真的要意识到哪些是我们要改进的，哪些是我们即使每次遇到了这样做问题都不大，甚至会为此而高兴的。<br>比如说，我之前会习惯地迁就别人，觉得做些我不是那么喜欢的事其实也无所谓（就例如某次去广州的经历，太过傻X了，我就不提了）。那之后我就有一个强烈的要改变的想法，而且这种想法不是第一次产生。所以，现在别人和我说什么请求，如果是我有一点不乐意的，果断说出来。</p>
-<p>2021年，对我来说，还有一份很大的收获就是，学会享受孤独。这种想法，大概是去图书馆取得多了，自然而然地产生了。在宿舍有时候是自己的问题，有时候是舍友大声打游戏，没办法专心。这其实怪不得舍友，主要是自己习惯的问题。去图书馆，可以看任何想看的课程，而且，在那里，并不会有那种排斥的感觉。任由思想遨游在知识的海洋里，有时候是一种很自由的感觉。虽然自己做的东西对别人来说可能一文不值，但是自己却可以享受这个过程。</p>
-<img src="https://hjbjwdk.oss-cn-guangzhou.aliyuncs.com/imges/eac5d1aad55ca0bb5bec207057308b3.jpg" height="50%" width="50%">
+        <p>友情提醒：记住，所有xml配置文件不能有中文！！！不能有中文注释！！！</p>
+<h1 id="基础使用方法"><a href="#基础使用方法" class="headerlink" title="基础使用方法"></a>基础使用方法</h1><h2 id="1-使用配置文件"><a href="#1-使用配置文件" class="headerlink" title="1.使用配置文件"></a>1.使用配置文件</h2><h3 id="1-1配置文件说明"><a href="#1-1配置文件说明" class="headerlink" title="1.1配置文件说明"></a>1.1配置文件说明</h3><p>mybatis使用配置文件开发结构大概是这样的(此处省去用maven构建的过程)</p>
+<img src="https://hjbjwdk.oss-cn-guangzhou.aliyuncs.com/imges/mybatis01.png">
+其中resources下的xml文件为核心配置文件，dao下的xml文件是局部配置文件
+
+
+<span id="more"></span>
+
+<p>核心配置文件的文件头示例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line">    <span class="meta">&lt;!DOCTYPE <span class="meta-keyword">configuration</span></span></span><br><span class="line"><span class="meta">        <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>局部配置文件的文件头示例：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span></span></span><br><span class="line"><span class="meta">        <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
-<p>来到写代码这一块，我的总结就是，一定要看清报错，看清报错，看清报错。很多时候，一看到有错就急着搜办法来解决，最后发现，那根本不是事！根本就不是同一个场景！此外，出错的时候更应该冷静下来（这其实很难做到），想想有什么可能，一个个排查。对于经常要用到的，要做好笔记，无论怎么记都好，真的要记！<br>写代码的时候，除了要关注细节，更要注重整体！关注整个架构。要对技术保持一种好奇心，大胆尝试。</p>
-<p>最后就是，想太多也没用，好好活着就好。</p>
 
+<p>1.核心配置文件，有顺序要求<br>properties:（实现引用配置文件），然后再在dataSource中使用配置<br>优先级：  外部配置&gt;内部</p>
+<properties resource="org/mybatis/example/config.properties">
+  <property name="username" value="${}"/>
+  <property name="password" value="F2Fa3!33TYyg"/>  // 可以使用外部配置文件，或者自习写
+</properties>
+
+<p>environments:<br>每次只能用一个environment,但能写多个</p>
+<p>dataSource：（POOLED默认）</p>
+<p>typeAliases：别名（在核心配置文件中写别名可以在局部配置文件中使用）<br><typeAliases><br>        <typeAlias type="com.guo.pojo.User" alias="User"/><br>    </typeAliases><br>扫描实体类的包名，这样的话，默认别名就是类名（小写）<br>也可以通过注解实现非默认别名（在实体类前加@Akias(“”)）</p>
+<!-- 参数值可以是Map,插入值可以是map里面的key，参数过多时可以使用map -->
+
+
+<p>模糊查询，局部配置文件中，参数只有一个的情况下可以不用声明参数类型   %关键字%</p>
+<p>核心配置文件中必须用Mapper把路劲写入  </p>
+<p>配置解析：<br>mybatis的事务管理器除了JDBC（使用java.sql.Connection对象完成事物的提交、回滚、关闭等）还有MANAGED（mybatis自身并实现事务管理，而让容器实现）</p>
+<p>settings:</p>
+<p>mappers:<br><mapper resource="org/mybatis/builder/AuthorMapper.xml"/><br><mapper class="org.mybatis.builder.AuthorMapper"/><br>class注意点：接口和Mapper配置文件要同名，接口和Mapper文件必须在同一个包下，</p>
+<!-- 将包内的映射器接口实现全部注册为映射器 -->
+<p><mappers>（包扫描）<br>  <package name="org.mybatis.builder"/><br></mappers></p>
+<p>&lt;package 注意点：接口和Mapper配置文件要同名，接口和Mapper文件必须在同一个包下，</p>
+<p>resource必须使用斜杠为路劲</p>
+<p>使用Map作为参数！，参数是map的key</p>
+<pre><code>&lt;select id=&quot;getUserbylimit&quot; parameterType=&quot;map&quot; resultType=&quot;com.pojo.User&quot;&gt;
+    select * from user limit #&#123;start_index&#125;,#&#123;nmu_size&#125;
+&lt;/select&gt;
+</code></pre>
+<p>分页查询：limit start,size</p>
+<h2 id="2-使用注解"><a href="#2-使用注解" class="headerlink" title="2.使用注解"></a>2.使用注解</h2>
       
 
       
@@ -218,7 +251,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssm</a>
         		</li>
       		
 		</ul>
@@ -274,7 +307,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/01/27/%E4%B8%80%E7%9B%B4%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%9A%84%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/11/Mybatis%E6%95%B4%E5%90%88/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,15 +321,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/02/08/Django%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Django的那些事
-        
-      </div>
-    </a>
   
+    <a href="/2022/02/10/springmvc%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">spring中的代理</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
